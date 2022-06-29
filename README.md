@@ -2,6 +2,8 @@
 
 <p>Este repositório tem como objetivo compartilhar as atividades de Programação Orientada a objetos da faculdade</p <br> <br> <br>
 
+<hr>
+
 <table align="center">
   <tr>
     <th width=300>Linguagem</th>
@@ -18,3 +20,5 @@
   </tr>
 
 </table>
+
+<hr>
