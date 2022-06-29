@@ -1,13 +1,11 @@
 # POO
 
-<p>Este repositório tem como objetivo compartilhar as atividades de Programação Orientada a objetos da faculdade</p <br> <br> <br>
-
+<p> <h2> Este repositório tem como objetivo compartilhar as atividades de Programação Orientada a objetos da faculdade </h2> </p> <br>
 <hr>
-
 <table align="center">
   <tr>
-    <th width=300>Linguagem</th>
-    <th width=300>Ferramentas</th>
+    <th width=300> <h2> Linguagem </h2> </th>
+    <th width=300> <h2> Ferramentas </h2> </th>
   </tr>
   <tr>
     <th width=300>
@@ -22,3 +20,5 @@
 </table>
 
 <hr>
+
+<H2> Status: Em andamento </h2>
