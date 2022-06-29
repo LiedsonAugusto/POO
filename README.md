@@ -8,8 +8,13 @@
     <th width=300>Ferramentas</th>
   </tr>
   <tr>
-    <th width=300></th>
-    <th width=300>Ferramentas</th>
+    <th width=300>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" width=30 height=40 />
+    </th>
+    <th width=300>
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width=30 height=40/ >
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width=30 height=40 />
+    </th>
   </tr>
 
 </table>
