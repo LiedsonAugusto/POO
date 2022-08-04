@@ -13,6 +13,7 @@ class Pessoa{
 
         //método abstrato para mostrar os dados da pessoa
         virtual void mostrarDados() const = 0;
+        virtual string getNome() const = 0;
 
     //atributos
     protected:
