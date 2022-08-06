@@ -1,5 +1,5 @@
 #include <iostream>
-#include "PessoaFisica.hpp"
+#include "PessoaFisica.h"
 
 PessoaFisica::PessoaFisica(string nome, string cpf) : Pessoa(nome), cpf(cpf) {}
 

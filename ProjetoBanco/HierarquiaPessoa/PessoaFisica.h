@@ -2,7 +2,7 @@
 #define PESSOAFISICA_H
 
 //incluindo o arquivo Pessoa.hpp
-#include "Pessoa.hpp"
+#include "Pessoa.h"
 
 //herança da classe pessoa
 class PessoaFisica : public Pessoa{

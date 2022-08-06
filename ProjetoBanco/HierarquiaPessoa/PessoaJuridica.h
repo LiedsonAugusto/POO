@@ -1,7 +1,7 @@
 #ifndef PESSOAJURIDICA_H
 #define PESSOAJURIDICA_H
 //incluindo o arquivo pessoa.hpp
-#include "Pessoa.hpp"
+#include "Pessoa.h"
 //classe herdando de pessoa
 class PessoaJuridica : public Pessoa{
     public:

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "PessoaJuridica.hpp"
+#include "PessoaJuridica.h"
 
 PessoaJuridica::PessoaJuridica(string nome, string cnpj, string razaoSocial, string nomeFantasia) : Pessoa(nome), 
 cnpj(cnpj), razaoSocial(razaoSocial), nomeFantasia(nomeFantasia) {}
