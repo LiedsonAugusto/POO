@@ -8,23 +8,29 @@
 class Conta{
     public:
         //construtor
-        Conta(int, double, Pessoa);
+        Conta(int numConta, double saldo, const Pessoa &p) : numConta(numConta), saldo(saldo) {
+            *nomeCorrentista = p;
+        }
         //destrutor
-        ~Conta();
+        virtual ~Conta() {if (nomeCorrentista){delete nomeCorrentista;}};
 
         int getNumConta() const {return this->numConta;}
         double getSaldo() const {return this->saldo;}
+        void getNomeCorrentista() const {return nomeCorrentista->mostrarDados();}
+        virtual void imprimirTransacoes() const;
 
         //deposito, igual para todos
-        virtual const Conta &operator<<(double saldo) {this->saldo += saldo; return *this;}
+        void operator<<(double saldo) {this->saldo += saldo;}
         //retirada
-        virtual const Conta &operator>>(double) = 0;
+        virtual void operator>>(double) = 0;
+        //
         virtual void extrato() const = 0;
 
-        void adicionaTransacao(const Transacoes &);
-        void removeTransacao();
+        virtual void adicionaTransacao(const Transacoes &);
+        virtual void removeTransacao();
+        virtual void transferenciaEntreConta(const Conta &c, double saldo) = 0;
 
-    private:
+    protected:
         int numConta;
         double saldo;
         Pessoa *nomeCorrentista;
