@@ -17,7 +17,7 @@ class Conta{
         int getNumConta() const {return this->numConta;}
         double getSaldo() const {return this->saldo;}
         void getNomeCorrentista() const {return nomeCorrentista->mostrarDados();}
-        virtual void imprimirTransacoes() const;
+        virtual void imprimirTransacoes() const = 0;
 
         //deposito, igual para todos
         void operator<<(double saldo) {this->saldo += saldo;}
@@ -26,9 +26,9 @@ class Conta{
         //
         virtual void extrato() const = 0;
 
-        virtual void adicionaTransacao(const Transacoes &);
-        virtual void removeTransacao();
-        virtual void transferenciaEntreConta(const Conta &c, double saldo) = 0;
+        virtual void adicionaTransacao(const Transacoes &) = 0;
+        virtual void removeTransacao() = 0;
+        virtual void transferenciaEntreConta(Conta &c, double saldo) = 0;
 
     protected:
         int numConta;

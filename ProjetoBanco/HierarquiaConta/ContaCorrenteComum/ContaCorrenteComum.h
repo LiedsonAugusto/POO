@@ -19,7 +19,8 @@ class ContaCorrenteComum : public Conta{
         //remover transição
         virtual void removeTransacao();
         //transferência entre contas
-        virtual void transferenciaEntreConta(const Conta &c, double saldo);
+        // NECESSÁRIO REVISAR QUANDO FOR FEITA A IMPLEMENTAÇÃO DO BANCO
+        virtual void transferenciaEntreConta(Conta &c, double saldo);
 
 };
 

@@ -34,3 +34,16 @@ void ContaCorrenteComum::extrato() const {
 void ContaCorrenteComum::adicionaTransacao(const Transacoes &p){
     vectorTransacoes.push_back(p);
 }
+
+void ContaCorrenteComum::removeTransacao(){
+    vectorTransacoes.pop_back();
+}
+
+// PROVISÓRIA
+void ContaCorrenteComum::transferenciaEntreConta(Conta &conta, double saldo){
+    if (saldo > this->saldo){
+        throw "Valor a ser transferido é maior que o valor existente na conta";
+    }
+    this->saldo -= saldo;
+    conta << saldo;
+}
