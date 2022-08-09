@@ -10,8 +10,14 @@ ContaCorrenteComum::~ContaCorrenteComum(){
 }
 
 void ContaCorrenteComum::imprimirTransacoes() const {
-    for (auto i = 0; i < vectorTransacoes.size(); i++){
-        vectorTransacoes[i].imprimirTransacao();
+    if (this->vectorTransacoes.size() > 30){
+        for (auto i = 0; i < 30; i++){
+            vectorTransacoes[i].imprimirTransacao();
+        }
+    } else {
+        for (auto i = 0; i < vectorTransacoes.size(); i++){
+            vectorTransacoes[i].imprimirTransacao();
+        }
     }
 }
 
