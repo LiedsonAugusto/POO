@@ -1,6 +1,6 @@
 #ifndef CONTAPOUPANCA_H
 #define CONTAPOUPANCA_H
-#include "Conta.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
 class ContaPoupanca : public Conta{
     public:

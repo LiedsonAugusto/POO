@@ -1,6 +1,7 @@
 #ifndef CONTA_H
 #define CONTA_H
-#include "Transacoes.h"
+
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 #include <vector>
 
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\Pessoa.h"

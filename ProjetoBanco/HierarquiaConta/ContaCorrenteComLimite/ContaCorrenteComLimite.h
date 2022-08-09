@@ -1,6 +1,6 @@
 #ifndef CONTACORRENTECOMLIMITE_H
 #define CONTACORRENTECOMLIMITE_H
-#include "Conta.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
 class ContaCorrenteComLimite : public Conta{
     public:

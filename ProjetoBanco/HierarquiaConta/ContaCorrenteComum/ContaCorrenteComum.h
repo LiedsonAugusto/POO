@@ -1,6 +1,6 @@
 #ifndef CONTACORRENTECOMUM_H
 #define CONTACORRENTECOMUM_H
-#include "Conta.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
 class ContaCorrenteComum : public Conta{
     public:
