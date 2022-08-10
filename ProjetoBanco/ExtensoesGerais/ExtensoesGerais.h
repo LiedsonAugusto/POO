@@ -8,4 +8,6 @@
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaPoupanca\\ContaPoupanca.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComum\\ContaCorrenteComum.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComLimite\\ContaCorrenteComLimite.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaBanco\\Banco.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaComLimiteExcecao\\ContaComLimiteExcecao.h"
 

@@ -24,10 +24,10 @@ void ContaCorrenteComLimite::imprimirTransacoes() const {
 
 void ContaCorrenteComLimite::operator>>(double saldo){
     if (saldo > this->saldo){
-        throw "Valor da conta insuficiente para o saldo.";
+        throw ContaComLimiteExcecao("Valor da conta insuficiente para o saldo.");
     }
     if (saldo > this->limite){
-        throw "Valor de retirada superior ao limite da conta.";
+        throw ContaComLimiteExcecao("Valor de retirada superior ao limite da conta.");
     }
     this->saldo -= saldo;
 }
@@ -51,10 +51,10 @@ void ContaCorrenteComLimite::removeTransacao(){
 
 void ContaCorrenteComLimite::transferenciaEntreConta(Conta &conta, double saldo){
     if (saldo > this->saldo){
-        throw "Valor a ser transferido é maior que o valor existente na conta.";
+        throw ContaComLimiteExcecao("Valor a ser transferido é maior que o valor existente na conta.");
     }
     if (saldo > this->limite){
-        throw "Valor a ser transferido é superior ao limite da conta.";
+        throw ContaComLimiteExcecao("Valor a ser transferido é superior ao limite da conta.");
     }
     this->saldo -= saldo;
     conta << saldo;
