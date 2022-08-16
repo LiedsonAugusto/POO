@@ -1,7 +1,7 @@
 #include <iostream>
-#include "ContaCorrenteComLimite.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
-ContaCorrenteComLimite::ContaCorrenteComLimite(int numConta, double saldo, const Pessoa &p, double limite) 
+ContaCorrenteComLimite::ContaCorrenteComLimite(int numConta, double saldo, Pessoa *p, double limite) 
 : Conta(numConta, saldo, p), limite(limite) {}
 
 ContaCorrenteComLimite::~ContaCorrenteComLimite(){
@@ -30,6 +30,7 @@ void ContaCorrenteComLimite::operator>>(double saldo){
         throw ContaComLimiteExcecao("Valor de retirada superior ao limite da conta.");
     }
     this->saldo -= saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Saque"));
 }
 
 void ContaCorrenteComLimite::extrato() const {
@@ -41,14 +42,6 @@ void ContaCorrenteComLimite::extrato() const {
     imprimirTransacoes();
 }
 
-void ContaCorrenteComLimite::adicionaTransacao(const Transacoes &p){
-    vectorTransacoes.push_back(p);
-}
-
-void ContaCorrenteComLimite::removeTransacao(){
-    vectorTransacoes.pop_back();
-}
-
 void ContaCorrenteComLimite::transferenciaEntreConta(Conta &conta, double saldo){
     if (saldo > this->saldo){
         throw ContaComLimiteExcecao("Valor a ser transferido é maior que o valor existente na conta.");
@@ -58,4 +51,5 @@ void ContaCorrenteComLimite::transferenciaEntreConta(Conta &conta, double saldo)
     }
     this->saldo -= saldo;
     conta << saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Transferência"));
 }

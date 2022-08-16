@@ -2,9 +2,7 @@
 #include <iostream>
 
 Transacoes::Transacoes(string data, double valorTransacao, string descricao)
-    : data(data), valorTransacao(valorTransacao) {
-  descricao = (valorTransacao > 0) ? "CRÉDITO" : "DÉBITO";
-}
+    : data(data), valorTransacao(valorTransacao), descricao(descricao) {}
 
 void Transacoes::imprimirTransacao() const {
   std::cout << "Data: " << getData() << " | "

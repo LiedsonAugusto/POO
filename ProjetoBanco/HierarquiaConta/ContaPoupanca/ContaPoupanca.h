@@ -5,7 +5,7 @@
 class ContaPoupanca : public Conta{
     public:
         //Construtor
-        ContaPoupanca(int, double, const Pessoa &, string);
+        ContaPoupanca(int, double, Pessoa *, const string &);
         //Destrutor
         ~ContaPoupanca();
         //retorna a data
@@ -17,8 +17,6 @@ class ContaPoupanca : public Conta{
 
         virtual void extrato() const;
 
-        virtual void adicionaTransacao(const Transacoes &);
-        virtual void removeTransacao();
         virtual void transferenciaEntreConta(Conta &c, double saldo);
 
 

@@ -1,7 +1,7 @@
 #include <iostream> 
-#include "ContaPoupanca.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
-ContaPoupanca::ContaPoupanca(int numConta, double saldo, const Pessoa &p, string data) : Conta(numConta, saldo, p),
+ContaPoupanca::ContaPoupanca(int numConta, double saldo, Pessoa *p, const string &data) : Conta(numConta, saldo, p),
 data(data) {}
 
 ContaPoupanca::~ContaPoupanca(){
@@ -25,9 +25,9 @@ void ContaPoupanca::imprimirTransacoes() const {
 void ContaPoupanca::operator>>(double saldo){
     if (saldo > this->saldo){
         throw "Saldo inferior ao valor que deseja retirar!";
-    } else {
-        this -> saldo -= saldo;
     }
+    this -> saldo -= saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Saque"));
 }
 
 void ContaPoupanca::extrato() const {
@@ -40,14 +40,6 @@ void ContaPoupanca::extrato() const {
     imprimirTransacoes();
 }
 
-void ContaPoupanca::adicionaTransacao(const Transacoes &p){
-    vectorTransacoes.push_back(p);
-}
-
-void ContaPoupanca::removeTransacao(){
-    vectorTransacoes.pop_back();
-}
-
 // PROVISÓRIA
 void ContaPoupanca::transferenciaEntreConta(Conta &conta, double saldo){
     if (saldo > this->saldo){
@@ -55,4 +47,5 @@ void ContaPoupanca::transferenciaEntreConta(Conta &conta, double saldo){
     }
     this->saldo -= saldo;
     conta << saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Transferência"));
 }

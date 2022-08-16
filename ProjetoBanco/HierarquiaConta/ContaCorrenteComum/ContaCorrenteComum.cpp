@@ -1,7 +1,7 @@
 #include <iostream>
-#include "ContaCorrenteComum.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
 
-ContaCorrenteComum::ContaCorrenteComum(int numConta, double saldo, const Pessoa &p) : Conta(numConta, saldo, p) {}
+ContaCorrenteComum::ContaCorrenteComum(int numConta, double saldo, Pessoa *p) : Conta(numConta, saldo, p) {}
 
 ContaCorrenteComum::~ContaCorrenteComum(){
     if(nomeCorrentista){
@@ -24,9 +24,10 @@ void ContaCorrenteComum::imprimirTransacoes() const {
 void ContaCorrenteComum::operator>>(double saldo){
     if (saldo > this->saldo){
         throw "Saldo inferior ao valor que deseja retirar!";
-    } else {
-        this -> saldo -= saldo;
-    }
+    } 
+    this -> saldo -= saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Saque"));
+    
 }
 
 void ContaCorrenteComum::extrato() const {
@@ -37,14 +38,6 @@ void ContaCorrenteComum::extrato() const {
     imprimirTransacoes();
 }
 
-void ContaCorrenteComum::adicionaTransacao(const Transacoes &p){
-    vectorTransacoes.push_back(p);
-}
-
-void ContaCorrenteComum::removeTransacao(){
-    vectorTransacoes.pop_back();
-}
-
 // PROVISÓRIA
 void ContaCorrenteComum::transferenciaEntreConta(Conta &conta, double saldo){
     if (saldo > this->saldo){
@@ -52,4 +45,5 @@ void ContaCorrenteComum::transferenciaEntreConta(Conta &conta, double saldo){
     }
     this->saldo -= saldo;
     conta << saldo;
+    vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Transferência"));
 }

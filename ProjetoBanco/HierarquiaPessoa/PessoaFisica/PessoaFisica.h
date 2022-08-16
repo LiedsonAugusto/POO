@@ -7,10 +7,7 @@
 class PessoaFisica : public Pessoa{
     public:
         //construtor
-        PessoaFisica(string, string);
-
-        //retornar o nome
-        string getNome() const {return this->nome;}
+        PessoaFisica(const string &, const string &);
         //retornar o cpf
         string getCpf() const {return this->cpf;}
         //mostrar os dados da pessoa fisica

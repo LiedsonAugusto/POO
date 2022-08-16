@@ -1,7 +1,7 @@
 #include <iostream>
 #include "PessoaJuridica.h"
 
-PessoaJuridica::PessoaJuridica(string nome, string cnpj, string razaoSocial, string nomeFantasia) : Pessoa(nome), 
+PessoaJuridica::PessoaJuridica(const string &nome,const string &cnpj,const string &razaoSocial,const string &nomeFantasia) : Pessoa(nome), 
 cnpj(cnpj), razaoSocial(razaoSocial), nomeFantasia(nomeFantasia) {}
 
 void PessoaJuridica::mostrarDados() const {

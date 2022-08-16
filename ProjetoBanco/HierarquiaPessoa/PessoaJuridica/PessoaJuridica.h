@@ -6,9 +6,7 @@
 class PessoaJuridica : public Pessoa{
     public:
         //construtor
-        PessoaJuridica(string, string, string, string);
-        //retornar o nome
-        string getNome() const {return this->nome;}
+        PessoaJuridica(const string &, const string &,const string &,const string &);
         //retornar o cnpj
         string getCnpj() const {return this->cnpj;}
 

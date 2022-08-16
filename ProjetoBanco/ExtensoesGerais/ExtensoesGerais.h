@@ -1,5 +1,3 @@
-
-
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\PessoaJuridica\\PessoaJuridica.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\PessoaFisica\\PessoaFisica.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\Pessoa.h"
@@ -9,5 +7,6 @@
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComum\\ContaCorrenteComum.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComLimite\\ContaCorrenteComLimite.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaBanco\\Banco.h"
+#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaBanco\\BancoExcecoes.h"
 #include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaComLimiteExcecao\\ContaComLimiteExcecao.h"
 

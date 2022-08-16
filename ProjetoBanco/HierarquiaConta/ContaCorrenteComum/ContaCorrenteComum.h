@@ -5,7 +5,7 @@
 class ContaCorrenteComum : public Conta{
     public:
         //construtor
-        ContaCorrenteComum(int, double, const Pessoa &);
+        ContaCorrenteComum(int, double, Pessoa *);
         //destrutor
         virtual ~ContaCorrenteComum();
         //imprimir transacoes
@@ -14,10 +14,6 @@ class ContaCorrenteComum : public Conta{
         virtual void operator>>(double);
         //impressão de tudo
         virtual void extrato() const;
-        //adicionar transição
-        virtual void adicionaTransacao(const Transacoes &);
-        //remover transição
-        virtual void removeTransacao();
         //transferência entre contas
         // NECESSÁRIO REVISAR QUANDO FOR FEITA A IMPLEMENTAÇÃO DO BANCO
         virtual void transferenciaEntreConta(Conta &c, double saldo);

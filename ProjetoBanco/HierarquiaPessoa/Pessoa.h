@@ -9,11 +9,11 @@ using std::string;
 class Pessoa{
     public:
         //construtor
-        Pessoa(string nome) : nome(nome) {}
+        Pessoa(const string &nome) : nome(nome) {}
 
         //método abstrato para mostrar os dados da pessoa
         virtual void mostrarDados() const = 0;
-        virtual string getNome() const = 0;
+        virtual string getNome() const {return this->nome;};
 
     //atributos
     protected:

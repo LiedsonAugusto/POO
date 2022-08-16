@@ -6,16 +6,20 @@
 class Banco : public PessoaJuridica{
 
     public:
-        Banco(string);
+        Banco(const string &, const string &, const string &, const string &, const string &);
+        ~Banco();
+        
+        string getNomeBanco() const {return this->nomeBanco;}
 
-        void cadastrarConta(const Conta &);
+        void cadastraPessoa(int);
+        void cadastrarConta(int, Pessoa *);
         void removeConta(int);
-        void consultaConta() const;
+        void consultaConta(const string &) const;
 
     private:
-        string nome;
-        std::vector<Conta> contas;
-        std::vector<Pessoa> correntistas;
+        string nomeBanco;
+        std::vector<Conta *> contas;
+        std::vector<Pessoa *> correntistas;
 };
 
 #endif

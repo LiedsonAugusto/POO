@@ -5,7 +5,7 @@
 class ContaCorrenteComLimite : public Conta{
     public:
     // construtor
-    ContaCorrenteComLimite(int, double, const Pessoa &, double);
+    ContaCorrenteComLimite(int, double,  Pessoa *, double);
     // destrutor
     ~ContaCorrenteComLimite();
     //mostrar transacoes
@@ -16,10 +16,6 @@ class ContaCorrenteComLimite : public Conta{
     virtual void operator>>(double);
     //mostrar o extrato
     virtual void extrato() const;
-    //adicionar transacao
-    virtual void adicionaTransacao(const Transacoes &);
-    //remover transacao
-    virtual void removeTransacao();
     //transferencia entre conta
     virtual void transferenciaEntreConta(Conta &c, double saldo);
     
