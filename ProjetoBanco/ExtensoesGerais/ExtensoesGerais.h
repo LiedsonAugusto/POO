@@ -1,12 +1,19 @@
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\PessoaJuridica\\PessoaJuridica.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\PessoaFisica\\PessoaFisica.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaPessoa\\Pessoa.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\Conta.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\Transacoes\\Transacoes.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaPoupanca\\ContaPoupanca.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComum\\ContaCorrenteComum.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaCorrenteComLimite\\ContaCorrenteComLimite.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaBanco\\Banco.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaBanco\\BancoExcecoes.h"
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\HierarquiaConta\\ContaComLimiteExcecao\\ContaComLimiteExcecao.h"
+#ifndef EXTENSOESGERAIS_H
+#define EXTENSOESGERAIS_H
 
+class pass{};
+
+#include "../HierarquiaPessoa/PessoaJuridica/PessoaJuridica.h"
+#include "../HierarquiaPessoa/PessoaFisica/PessoaFisica.h"
+#include "../HierarquiaPessoa/Pessoa.h"
+#include "../HierarquiaConta/Conta.h"
+#include "../HierarquiaConta/ContaExcecao.h"
+#include "../HierarquiaConta/Transacoes/Transacoes.h"
+#include "../HierarquiaConta/ContaPoupanca/ContaPoupanca.h"
+#include "../HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.h"
+#include "../HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.h"
+#include "../HierarquiaBanco/Banco.h"
+#include "../HierarquiaBanco/BancoExcecoes.h"
+#include "../HierarquiaConta/ContaComLimiteExcecao/ContaComLimiteExcecao.h"
+
+#endif

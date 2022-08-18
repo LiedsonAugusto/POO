@@ -1,25 +1,28 @@
 #ifndef BANCO_H
 #define BANCO_H
 
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
+#include "../ExtensoesGerais/ExtensoesGerais.h"
 
-class Banco : public PessoaJuridica{
+class Banco : public PessoaJuridica {
 
     public:
-        Banco(const string &, const string &, const string &, const string &, const string &);
+        explicit Banco(const string &, const string &, const string &, const string &, const string &);
         ~Banco();
         
         string getNomeBanco() const {return this->nomeBanco;}
 
         void cadastraPessoa(int);
-        void cadastrarConta(int, Pessoa *);
+        void cadastrarConta(int, const string &);
         void removeConta(int);
+        void removePessoa(const string &);
         void consultaConta(const string &) const;
 
     private:
         string nomeBanco;
-        std::vector<Conta *> contas;
-        std::vector<Pessoa *> correntistas;
+        std::list<Conta *> contas;
+        std::list<Pessoa *> correntistas;
+        bool validarNumConta(int) const;
+        bool validarNomePessoa(const string &)const ;
 };
 
 #endif

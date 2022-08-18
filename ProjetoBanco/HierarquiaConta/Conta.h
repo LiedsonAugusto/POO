@@ -1,16 +1,17 @@
 #ifndef CONTA_H
 #define CONTA_H
 
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
-#include <vector>
+//#include "../ExtensoesGerais/ExtensoesGerais.h"
+#include "Transacoes/Transacoes.h"
+#include <list>
 
 class Conta{
     public:
-        //construtor
-        Conta(int numConta, double saldo, Pessoa *p) : numConta(numConta), saldo(saldo) {
+
+        explicit Conta(int numConta, double saldo, Pessoa *p) : numConta(numConta), saldo(saldo) {
             nomeCorrentista = p;
         }
-        //destrutor
+
         virtual ~Conta(){};
 
         int getNumConta() const {return this->numConta;}
@@ -18,11 +19,11 @@ class Conta{
         string getNomeCorrentista() const {return nomeCorrentista->getNome();}
         virtual void imprimirTransacoes() const = 0;
 
-        //deposito, igual para todos
-        void operator<<(double saldo) {this->saldo += saldo; vectorTransacoes.push_back(Transacoes("31/04/2005", saldo, "Depósito"));}
-        //retirada
+
+        void operator<<(double saldo) {this->saldo += saldo; listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Depósito"));}
+
         virtual void operator>>(double) = 0;
-        //
+
         virtual void extrato() const = 0;
 
         virtual void transferenciaEntreConta(Conta &c, double saldo) = 0;
@@ -31,7 +32,7 @@ class Conta{
         int numConta;
         double saldo;
         Pessoa *nomeCorrentista;
-        std::vector<Transacoes> vectorTransacoes;
+        std::list<Transacoes> listTransacoes;
 };
 
 #endif

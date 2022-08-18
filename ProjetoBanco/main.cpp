@@ -1,8 +1,8 @@
 #include <iostream>
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
+#include "ExtensoesGerais/ExtensoesGerais.h"
 
 int main(){
     
-
+    std::cout << "OI";
     return 0;
 }

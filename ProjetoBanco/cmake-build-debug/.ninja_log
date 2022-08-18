@@ -1,0 +1,18 @@
+# ninja log v5
+14	858	6824791660796209	CMakeFiles/ProjetoBanco.dir/HierarquiaConta/Transacoes/Transacoes.cpp.obj	d58f5462fe092746
+5	685	6824875200126040	CMakeFiles/empty.dir/HierarquiaConta/ContaPoupanca/ContaPoupanca.cpp.obj	a33890b27b1d02a7
+1	689	6824875200167360	CMakeFiles/empty.dir/HierarquiaBanco/Banco.cpp.obj	e7182329f022ab9
+9	500	6824875439069968	CMakeFiles/empty.dir/HierarquiaConta/Transacoes/Transacoes.cpp.obj	bfa959624820b6c4
+13	594	6824875439780749	CMakeFiles/empty.dir/HierarquiaConta/ContaPoupanca/ContaPoupanca.cpp.obj	a33890b27b1d02a7
+5	688	6824875440875656	CMakeFiles/empty.dir/HierarquiaBanco/Banco.cpp.obj	e7182329f022ab9
+501	1051	6824875444502596	CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.cpp.obj	4c67934d551d3039
+596	1066	6824875444690113	CMakeFiles/empty.dir/HierarquiaPessoa/PessoaFisica/PessoaFisica.cpp.obj	d998071e8b080501
+689	1220	6824875446255929	CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.cpp.obj	4c5729fd49df5ee9
+1051	1424	6824875448311017	CMakeFiles/empty.dir/main.cpp.obj	ccdb99bef49e027c
+1066	1464	6824875448710273	CMakeFiles/empty.dir/HierarquiaPessoa/PessoaJuridica/PessoaJuridica.cpp.obj	926b66346372984d
+1464	1719	6824875451212470	empty.exe	1f5e737121b271d
+20	785	6824880815126398	CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.cpp.obj	4c5729fd49df5ee9
+11	820	6824880815473444	CMakeFiles/empty.dir/HierarquiaConta/ContaPoupanca/ContaPoupanca.cpp.obj	a33890b27b1d02a7
+6	904	6824880816399143	CMakeFiles/empty.dir/HierarquiaBanco/Banco.cpp.obj	e7182329f022ab9
+785	1242	6824880819808419	CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.cpp.obj	4c67934d551d3039
+1243	1388	6824880821226432	empty.exe	1f5e737121b271d

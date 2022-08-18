@@ -5,7 +5,7 @@
 
 class BancoExcecao : public std::logic_error{
     public:
-       BancoExcecao(const char *e) : logic_error(e) {}
+       explicit BancoExcecao(const char *e) : logic_error(e) {}
 };
 
 #endif

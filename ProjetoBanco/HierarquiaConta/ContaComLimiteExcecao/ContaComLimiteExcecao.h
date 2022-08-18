@@ -5,7 +5,7 @@
 
 class ContaComLimiteExcecao : public std::logic_error {
     public:
-        ContaComLimiteExcecao(const char *e) : logic_error(e) {}
+        explicit ContaComLimiteExcecao(const char *e) : logic_error(e) {}
 };
 
 #endif

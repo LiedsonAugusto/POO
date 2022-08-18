@@ -6,7 +6,7 @@ using std::string;
 
 class Transacoes {
   public:
-    Transacoes(string, double, string);
+    explicit Transacoes(string, double, string);
 
     string getData() const {return this->data;}
     double getValorTransacao() const {return this->valorTransacao;}

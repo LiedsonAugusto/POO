@@ -1,20 +1,23 @@
 #ifndef PESSOAJURIDICA_H
 #define PESSOAJURIDICA_H
-//incluindo o arquivo pessoa.hpp
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
-//classe herdando de pessoa
+
+//#include "../../ExtensoesGerais/ExtensoesGerais.h"
+#include "../Pessoa.h"
+
 class PessoaJuridica : public Pessoa{
     public:
-        //construtor
-        PessoaJuridica(const string &, const string &,const string &,const string &);
-        //retornar o cnpj
+
+        explicit PessoaJuridica(const string &, const string &,const string &,const string &);
+
+        string getNome() const override {return this->nome;}
+
         string getCnpj() const {return this->cnpj;}
 
         string getRazaoSocial() const {return this->razaoSocial;}
 
         string getNomeFantasia() const {return this->nomeFantasia;}
-        //mostrar os dados da pessoa juridica
-         virtual void mostrarDados() const;
+
+        void mostrarDados() const override;
     //atributos
     private:
         string nomeFantasia;

@@ -1,23 +1,23 @@
 #ifndef CONTAPOUPANCA_H
 #define CONTAPOUPANCA_H
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
+#include "../../ExtensoesGerais/ExtensoesGerais.h"
 
 class ContaPoupanca : public Conta{
     public:
-        //Construtor
-        ContaPoupanca(int, double, Pessoa *, const string &);
-        //Destrutor
-        ~ContaPoupanca();
-        //retorna a data
+
+        explicit ContaPoupanca(int, double, Pessoa *, const string &);
+
+        ~ContaPoupanca() override;
+
         string getData() const {return this->data;}
 
-        virtual void imprimirTransacoes() const;
+        void imprimirTransacoes() const override;
         
-        virtual void operator>>(double);
+        void operator>>(double) override;
 
-        virtual void extrato() const;
+        void extrato() const override;
 
-        virtual void transferenciaEntreConta(Conta &c, double saldo);
+        void transferenciaEntreConta(Conta &c, double saldo) override;
 
 
     private:

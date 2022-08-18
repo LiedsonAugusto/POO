@@ -1,5 +1,5 @@
 #include <iostream>
-#include "PessoaFisica.h"
+#include "../../ExtensoesGerais/ExtensoesGerais.h"
 
 PessoaFisica::PessoaFisica(const string &nome, const string &cpf) : Pessoa(nome), cpf(cpf) {}
 

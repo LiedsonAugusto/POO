@@ -1,20 +1,18 @@
 #include <iostream>
-#include "C:\\Users\\PC\\Documents\\ENG - POO\\ProjetoBanco\\ExtensoesGerais\\ExtensoesGerais.h"
+#include "../ExtensoesGerais/ExtensoesGerais.h"
 
 
 Banco::Banco(const string &nomePessoa, const string &nomeFantasia, const string &razaoSocial, const string &cnpj, const string &nomeBanco):
 PessoaJuridica(nomePessoa, nomeFantasia, razaoSocial, cnpj), nomeBanco(nomeBanco) {}
 
 Banco::~Banco(){
-    for(auto i = 0; i < contas.size(); i++){
-        if (contas[i] != nullptr){
-            delete contas[i];
-        }
+    for(auto &list : contas){
+        delete list;
     }
 
-    for(auto i = 0; i < correntistas.size(); i++){
-        if (correntistas[i] != nullptr){
-            delete correntistas[i];
+    for(auto &list : correntistas){
+        if (list != nullptr){
+            delete list;
         }
     }
 }
@@ -26,6 +24,9 @@ void Banco::cadastraPessoa(int escolha){
         case 1:
             std::cout << "Nome: ";
             std::cin >> nome;
+            if(validarNomePessoa(nome)){
+                throw BancoExcecao("Já existe conta com esse nome.");
+            }
             std::cout << '\n' << "Razao Social: ";
             std::cin >> razaoSocial;
             std::cout << '\n' << "Nome Fantasia: ";
@@ -39,6 +40,9 @@ void Banco::cadastraPessoa(int escolha){
         case 2:
             std::cout << "Nome: ";
             std::cin >> nome;
+            if(validarNomePessoa(nome)){
+                throw BancoExcecao("Já existe conta com esse nome.");
+            }
             std::cout << '\n' << "CPF: ";
             std::cin >> cpf;
             correntistas.push_back(new PessoaFisica(nome, cpf));
@@ -46,20 +50,65 @@ void Banco::cadastraPessoa(int escolha){
     }
 }
 
-//void Banco::cadastrarConta(int escolha, Pessoa *p){}
+bool Banco::validarNumConta(int numConta)const{
+    for(auto &list : contas){
+        if (list->getNumConta() == numConta){
+            return true;
+        }
+    }
+    return false;
+}
+
+bool Banco::validarNomePessoa(const string &nomePessoa)const{
+    for (auto &list : correntistas){
+        if (list->getNome() == nomePessoa){
+            return true;
+        }
+    }
+    return false;
+}
+
+void Banco::cadastrarConta(int escolha, const string &nomePessoa){
+    
+    string data;
+    int numConta;
+    double saldo, limite;
+    switch (escolha){
+        //comum
+        case 1:
+            break;
+        //poupança
+        case 2:
+            break;
+        //limite
+        case 3:
+            break;
+    }
+}
 
 void Banco::removeConta(int numConta){
-    for(auto i = 0; i < contas.size(); i++){
-        if (contas[i]->getNumConta() == numConta){
-            contas.erase(contas.begin()+i);
+    if (!validarNumConta(numConta)){
+        throw BancoExcecao("Conta não existente.");
+    }
+    std::list<Conta *>::iterator ite2 = contas.begin();
+    int contador = 0; 
+    for(auto &list : contas){
+        if (list->getNumConta() == numConta){
+            advance(ite2, contador);
+            delete list;
+            contas.erase(ite2);
         }
+        contador++;
     }
 }
 
 void Banco::consultaConta(const string &pessoa) const {
-    for (auto i =0 ; i < contas.size(); i++){
-        if(contas[i]->getNomeCorrentista() == pessoa){
-            contas[i]->extrato();
+    if (!validarNomePessoa(pessoa)){
+        throw BancoExcecao("Pessoa não cadastrada.");
+    }
+    for (auto &list : contas){
+        if(list->getNomeCorrentista() == pessoa){
+            list->extrato();
         }
     }
 }

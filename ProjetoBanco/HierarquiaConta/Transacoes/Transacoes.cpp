@@ -1,4 +1,4 @@
-#include "Transacoes.h"
+#include "../../ExtensoesGerais/ExtensoesGerais.h"
 #include <iostream>
 
 Transacoes::Transacoes(string data, double valorTransacao, string descricao)
