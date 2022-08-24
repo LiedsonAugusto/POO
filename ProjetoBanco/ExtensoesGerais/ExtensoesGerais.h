@@ -14,6 +14,7 @@ class pass{};
 #include "../HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.h"
 #include "../HierarquiaBanco/Banco.h"
 #include "../HierarquiaBanco/BancoExcecoes.h"
-#include "../HierarquiaConta/ContaComLimiteExcecao/ContaComLimiteExcecao.h"
+#include "../UsuaryInterface/UsuaryInterface.h"
+
 
 #endif

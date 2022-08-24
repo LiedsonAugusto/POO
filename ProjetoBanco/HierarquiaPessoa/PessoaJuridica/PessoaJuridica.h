@@ -11,7 +11,7 @@ class PessoaJuridica : public Pessoa{
 
         string getNome() const override {return this->nome;}
 
-        string getCnpj() const {return this->cnpj;}
+        string getCpfOuCnpj() const override {return this->cnpj;}
 
         string getRazaoSocial() const {return this->razaoSocial;}
 

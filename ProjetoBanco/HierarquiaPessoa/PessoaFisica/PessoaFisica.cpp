@@ -5,5 +5,5 @@ PessoaFisica::PessoaFisica(const string &nome, const string &cpf) : Pessoa(nome)
 
 void PessoaFisica::mostrarDados() const {
     std::cout << "Nome: " << getNome() << " | ";
-    std::cout << "CPF: " << getCpf() << '\n';
+    std::cout << "CPF: " << getCpfOuCnpj() << '\n';
 }

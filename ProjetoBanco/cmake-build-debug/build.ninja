@@ -97,6 +97,12 @@ build CMakeFiles/empty.dir/main.cpp.obj: CXX_COMPILER__empty_Debug C$:/Users/PC/
   OBJECT_DIR = CMakeFiles\empty.dir
   OBJECT_FILE_DIR = CMakeFiles\empty.dir
 
+build CMakeFiles/empty.dir/UsuaryInterface/UsuaryInterface.cpp.obj: CXX_COMPILER__empty_Debug C$:/Users/PC/Documents/ENG$ -$ POO/ProjetoBanco/UsuaryInterface/UsuaryInterface.cpp || cmake_object_order_depends_target_empty
+  DEP_FILE = CMakeFiles\empty.dir\UsuaryInterface\UsuaryInterface.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\empty.dir
+  OBJECT_FILE_DIR = CMakeFiles\empty.dir\UsuaryInterface
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target empty
@@ -105,7 +111,7 @@ build CMakeFiles/empty.dir/main.cpp.obj: CXX_COMPILER__empty_Debug C$:/Users/PC/
 #############################################
 # Link the executable empty.exe
 
-build empty.exe: CXX_EXECUTABLE_LINKER__empty_Debug CMakeFiles/empty.dir/HierarquiaBanco/Banco.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/Transacoes/Transacoes.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaPoupanca/ContaPoupanca.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.cpp.obj CMakeFiles/empty.dir/HierarquiaPessoa/PessoaFisica/PessoaFisica.cpp.obj CMakeFiles/empty.dir/HierarquiaPessoa/PessoaJuridica/PessoaJuridica.cpp.obj CMakeFiles/empty.dir/main.cpp.obj
+build empty.exe: CXX_EXECUTABLE_LINKER__empty_Debug CMakeFiles/empty.dir/HierarquiaBanco/Banco.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/Transacoes/Transacoes.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaPoupanca/ContaPoupanca.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.cpp.obj CMakeFiles/empty.dir/HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.cpp.obj CMakeFiles/empty.dir/HierarquiaPessoa/PessoaFisica/PessoaFisica.cpp.obj CMakeFiles/empty.dir/HierarquiaPessoa/PessoaJuridica/PessoaJuridica.cpp.obj CMakeFiles/empty.dir/main.cpp.obj CMakeFiles/empty.dir/UsuaryInterface/UsuaryInterface.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\empty.dir

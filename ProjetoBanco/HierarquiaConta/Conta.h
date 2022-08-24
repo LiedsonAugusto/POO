@@ -3,6 +3,7 @@
 
 //#include "../ExtensoesGerais/ExtensoesGerais.h"
 #include "Transacoes/Transacoes.h"
+#include "ContaExcecao.h"
 #include <list>
 
 class Conta{
@@ -16,11 +17,18 @@ class Conta{
 
         int getNumConta() const {return this->numConta;}
         double getSaldo() const {return this->saldo;}
-        string getNomeCorrentista() const {return nomeCorrentista->getNome();}
+        string getCpfOuCnpjCorrentista() const {return nomeCorrentista->getCpfOuCnpj();}
+        string getNome() const {return nomeCorrentista->getNome();}
         virtual void imprimirTransacoes() const = 0;
 
 
-        void operator<<(double saldo) {this->saldo += saldo; listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Depósito"));}
+        void operator<<(double saldo) {
+            if(saldo <= 0){
+                throw ContaExcecao("Deposite algum valor válido");
+            }
+            this->saldo += saldo;
+            listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Depósito"))
+            ;}
 
         virtual void operator>>(double) = 0;
 

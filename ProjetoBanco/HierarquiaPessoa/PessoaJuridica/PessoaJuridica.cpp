@@ -6,7 +6,7 @@ cnpj(cnpj), razaoSocial(razaoSocial), nomeFantasia(nomeFantasia) {}
 
 void PessoaJuridica::mostrarDados() const  {
     std::cout << "Nome: " << getNome() << " | ";
-    std::cout << "CNPJ: " << getCnpj() << " | ";
+    std::cout << "CNPJ: " << getCpfOuCnpj() << " | ";
     std::cout << "Razao Social: " << getRazaoSocial() << " | ";
     std::cout << "Nome Fantasia: "<< getNomeFantasia() << "\n";
 }

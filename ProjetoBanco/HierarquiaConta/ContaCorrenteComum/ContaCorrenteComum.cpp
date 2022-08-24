@@ -5,9 +5,7 @@ ContaCorrenteComum::ContaCorrenteComum(int numConta, double saldo, Pessoa *p)
 : Conta(numConta, saldo, p) {}
 
 ContaCorrenteComum::~ContaCorrenteComum(){
-    if(nomeCorrentista){
-        delete nomeCorrentista;
-    }
+    delete nomeCorrentista;
 }
 
 void ContaCorrenteComum::imprimirTransacoes() const {
@@ -29,6 +27,9 @@ void ContaCorrenteComum::imprimirTransacoes() const {
 }
 
 void ContaCorrenteComum::operator>>(double saldo){
+    if (saldo == 0){
+        throw ContaExcecao("Valor para retirada inválido");
+    }
     if (saldo > this->saldo){
         throw ContaExcecao("Saldo inferior ao valor que deseja retirar!");
     } 
@@ -38,15 +39,22 @@ void ContaCorrenteComum::operator>>(double saldo){
 }
 
 void ContaCorrenteComum::extrato() const {
-    std::cout << "Número da conta: " << getNumConta() << " | ";
-    std::cout << "Nome: ";
-    getNomeCorrentista();
-    std::cout << "Transações: " << '\n';
-    imprimirTransacoes();
+    std::cout << "---------- CONTA POUPANÇA ----------\n";
+    std::cout << "Número da conta: " << getNumConta();
+    std::cout << "\nNome: " << getNome();
+    std::cout << "\nSaldo: " << getSaldo() << '\n';
+    if (!this->listTransacoes.empty()){
+        std::cout << "Transações: " << '\n';
+        imprimirTransacoes();
+    }
+    std::cout << "--------------------------------------\n";
 }
 
-// PROVISÓRIA
+
 void ContaCorrenteComum::transferenciaEntreConta(Conta &conta, double saldo){
+    if (&conta == this){
+        throw ContaExcecao("Não se deve fazer transferência para a mesma conta");
+    }
     if (saldo > this->saldo){
         throw ContaExcecao("Valor a ser transferido é maior que o valor existente na conta");
     }

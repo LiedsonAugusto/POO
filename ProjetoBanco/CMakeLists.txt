@@ -18,11 +18,9 @@ add_executable(empty
         HierarquiaConta/ContaCorrenteComum/ContaCorrenteComum.cpp
         HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.cpp
         HierarquiaConta/ContaCorrenteComLimite/ContaCorrenteComLimite.h
-        HierarquiaConta/ContaComLimiteExcecao/ContaComLimiteExcecao.h
         HierarquiaPessoa/Pessoa.h
         HierarquiaPessoa/PessoaFisica/PessoaFisica.h
         HierarquiaPessoa/PessoaFisica/PessoaFisica.cpp
         HierarquiaPessoa/PessoaJuridica/PessoaJuridica.h
         HierarquiaPessoa/PessoaJuridica/PessoaJuridica.cpp
-
-        main.cpp HierarquiaConta/ContaExcecao.h)
+        main.cpp HierarquiaConta/ContaExcecao.h UsuaryInterface/UsuaryInterface.h UsuaryInterface/UsuaryInterface.cpp)

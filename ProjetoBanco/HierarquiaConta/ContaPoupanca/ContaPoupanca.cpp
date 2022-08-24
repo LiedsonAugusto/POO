@@ -5,9 +5,7 @@ ContaPoupanca::ContaPoupanca(int numConta, double saldo, Pessoa *p, const string
 : Conta(numConta, saldo, p), data(data) {}
 
 ContaPoupanca::~ContaPoupanca(){
-    if (nomeCorrentista){
-        delete nomeCorrentista;
-    }
+    delete nomeCorrentista;
 }
 
 void ContaPoupanca::imprimirTransacoes() const {
@@ -29,6 +27,9 @@ void ContaPoupanca::imprimirTransacoes() const {
 }
 
 void ContaPoupanca::operator>>(double saldo){
+    if (saldo == 0){
+        throw ContaExcecao("Valor para retirada inválido");
+    }
     if (saldo > this->saldo){
         throw ContaExcecao("Saldo inferior ao valor que deseja retirar!");
     }
@@ -37,16 +38,22 @@ void ContaPoupanca::operator>>(double saldo){
 }
 
 void ContaPoupanca::extrato() const {
-    std::cout << "Número da conta: " << getNumConta() << " | ";
-    std::cout << "Nome: ";
-    getNomeCorrentista();
-    std::cout << "Data da conta: ";
-    getData();
-    std::cout << "\nTransações: " << '\n';
-    imprimirTransacoes();
+    std::cout << "---------- CONTA POUPANÇA ----------\n";
+    std::cout << "Número da conta: " << getNumConta();
+    std::cout << "\nNome: " << getNome();
+    std::cout << "\nSaldo: " << getSaldo();
+    std::cout << "\nData da conta: " << getData() << '\n';
+    if (!this->listTransacoes.empty()){
+        std::cout << "Transações: " << '\n';
+        imprimirTransacoes();
+    }
+    std::cout << "--------------------------------------\n";
 }
 
 void ContaPoupanca::transferenciaEntreConta(Conta &conta, double saldo){
+    if (&conta == this){
+        throw ContaExcecao("Não se deve fazer transferência para a mesma conta");
+    }
     if (saldo > this->saldo){
         throw ContaExcecao("Valor a ser transferido é maior que o valor existente na conta");
     }

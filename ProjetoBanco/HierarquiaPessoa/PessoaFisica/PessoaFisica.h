@@ -9,7 +9,7 @@ class PessoaFisica : public Pessoa{
 
         explicit PessoaFisica(const string &, const string &);
 
-        string getCpf() const {return this->cpf;}
+        string getCpfOuCnpj() const override {return this->cpf;}
 
         string getNome() const override {return this->nome;}
 

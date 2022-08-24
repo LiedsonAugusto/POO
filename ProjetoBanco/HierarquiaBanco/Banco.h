@@ -7,15 +7,22 @@ class Banco : public PessoaJuridica {
 
     public:
         explicit Banco(const string &, const string &, const string &, const string &, const string &);
-        ~Banco();
+        ~Banco() override;
         
         string getNomeBanco() const {return this->nomeBanco;}
 
+        //funcionario
         void cadastraPessoa(int);
         void cadastrarConta(int, const string &);
         void removeConta(int);
         void removePessoa(const string &);
-        void consultaConta(const string &) const;
+        void consultaContas(const string &) const;
+        void consultaUnicaConta(int) const;
+
+        //cliente
+        void depositarNaConta(int, double);
+        void retiradaDaConta(int, double);
+        void transferenciaEntreContas(int, int, double);
 
     private:
         string nomeBanco;
