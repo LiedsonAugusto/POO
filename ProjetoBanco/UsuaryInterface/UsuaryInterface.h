@@ -8,6 +8,8 @@ class UsuaryInterface {
 public:
     explicit UsuaryInterface(Banco *b){banco = b; clienteOuFuncionario = -1; escolhas = -1;}
 
+    int getEscolhas() const {return this->escolhas;}
+
     void ClienteOuFuncionario();
     void loopFuncionalidades();
     void funcaoFuncionario(int);

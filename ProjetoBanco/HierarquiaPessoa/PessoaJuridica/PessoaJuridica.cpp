@@ -5,8 +5,10 @@ PessoaJuridica::PessoaJuridica(const string &nome,const string &cnpj,const strin
 cnpj(cnpj), razaoSocial(razaoSocial), nomeFantasia(nomeFantasia) {}
 
 void PessoaJuridica::mostrarDados() const  {
-    std::cout << "Nome: " << getNome() << " | ";
-    std::cout << "CNPJ: " << getCpfOuCnpj() << " | ";
-    std::cout << "Razao Social: " << getRazaoSocial() << " | ";
-    std::cout << "Nome Fantasia: "<< getNomeFantasia() << "\n";
+    std::cout << "---------- PESSOA JURÍDICA ----------\n";
+    std::cout << "Nome: " << getNome();
+    std::cout << "\nCNPJ: " << getCpfOuCnpj();
+    std::cout << "\nRazao Social: " << getRazaoSocial();
+    std::cout << "\nNome Fantasia: "<< getNomeFantasia();
+    std::cout << "\n------------------------------------\n";
 }

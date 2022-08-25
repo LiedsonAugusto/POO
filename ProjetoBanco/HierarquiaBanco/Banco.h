@@ -18,11 +18,13 @@ class Banco : public PessoaJuridica {
         void removePessoa(const string &);
         void consultaContas(const string &) const;
         void consultaUnicaConta(int) const;
+        void consultaPessoa(const string &) const;
 
         //cliente
         void depositarNaConta(int, double);
         void retiradaDaConta(int, double);
         void transferenciaEntreContas(int, int, double);
+        bool conexaoContaCliente(int, const string&) const;
 
     private:
         string nomeBanco;

@@ -41,7 +41,7 @@ void ContaCorrenteComLimite::operator>>(double saldo){
 }
 
 void ContaCorrenteComLimite::extrato() const {
-    std::cout << "---------- CONTA POUPANÇA ----------\n";
+    std::cout << "---------- CONTA LIMITE ----------\n";
     std::cout << "Número da conta: " << getNumConta();
     std::cout << "\nNome: " << getNome();
     std::cout << "\nSaldo: " << getSaldo();

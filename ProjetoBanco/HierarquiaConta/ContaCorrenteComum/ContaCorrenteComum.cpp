@@ -39,7 +39,7 @@ void ContaCorrenteComum::operator>>(double saldo){
 }
 
 void ContaCorrenteComum::extrato() const {
-    std::cout << "---------- CONTA POUPANÇA ----------\n";
+    std::cout << "---------- CONTA COMUM ----------\n";
     std::cout << "Número da conta: " << getNumConta();
     std::cout << "\nNome: " << getNome();
     std::cout << "\nSaldo: " << getSaldo() << '\n';
