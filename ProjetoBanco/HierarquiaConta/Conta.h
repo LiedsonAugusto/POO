@@ -24,15 +24,17 @@ class Conta{
 
         void operator<<(double saldo) {
             if(saldo <= 0){
-                throw ContaExcecao("Deposite algum valor válido");
+                throw ContaExcecao("Deposite algum valor valido");
             }
             this->saldo += saldo;
-            listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Depósito"))
+            listTransacoes.push_back(Transacoes(horarioAtual(), saldo, "Deposito"))
             ;}
 
         virtual void operator>>(double) = 0;
 
         virtual void extrato() const = 0;
+
+        virtual void trocaDeNome(const string &nome){nomeCorrentista->setNome(nome);}
 
         virtual void transferenciaEntreConta(Conta &c, double saldo) = 0;
 

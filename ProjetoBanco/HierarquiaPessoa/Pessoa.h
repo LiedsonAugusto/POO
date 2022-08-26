@@ -13,6 +13,7 @@ class Pessoa{
         virtual void mostrarDados() const = 0;
         virtual string getCpfOuCnpj() const = 0;
         virtual string getNome() const {return this->nome;};
+        virtual void setNome(const string &nome) {this->nome = nome;}
 
     protected:
         string nome;

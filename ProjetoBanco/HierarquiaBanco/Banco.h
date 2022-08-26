@@ -25,6 +25,10 @@ class Banco : public PessoaJuridica {
         void retiradaDaConta(int, double);
         void transferenciaEntreContas(int, int, double);
         bool conexaoContaCliente(int, const string&) const;
+        void trocaDeNome(const string &, const string &);
+
+        bool contasVazio() const {return this->contas.empty();}
+        bool correntistasVazio() const {return this->correntistas.empty();}
 
     private:
         string nomeBanco;

@@ -10,15 +10,15 @@ int main(){
     UsuaryInterface us(&bancoJS);
     us.ClienteOuFuncionario();
     do {
-        try{
-            us.loopFuncionalidades();
+        try{us.loopFuncionalidades();
             us.printDespedida();
+
         } catch (BancoExcecao &e){
-            std::cout << "Erro! " << e.what() << '\n';
+            std::cout << "\nErro! " << e.what() << '\n';
         } catch (ContaExcecao &e) {
-            std::cout << "Erro! " << e.what() << '\n';
+            std::cout << "\nErro! " << e.what() << '\n';
         } catch (std::exception &e){
-            std::cout << "Erro inesperado.\n";
+            std::cout << "\nErro inesperado.\n";
         }
     }
     while (us.getEscolhas() != 9);

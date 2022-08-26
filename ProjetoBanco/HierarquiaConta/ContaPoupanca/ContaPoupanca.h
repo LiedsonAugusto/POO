@@ -5,11 +5,11 @@
 class ContaPoupanca : public Conta{
     public:
 
-        explicit ContaPoupanca(int, double, Pessoa *, const string &);
+        explicit ContaPoupanca(int, double, Pessoa *,const tm &);
 
         ~ContaPoupanca() override;
 
-        string getData() const {return this->data;}
+        tm getData() const {return this->data;}
 
         void imprimirTransacoes() const override;
         
@@ -21,7 +21,7 @@ class ContaPoupanca : public Conta{
 
 
     private:
-        string data;
+        tm data;
 };
 
 #endif

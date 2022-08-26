@@ -15,6 +15,7 @@ class pass{};
 #include "../HierarquiaBanco/Banco.h"
 #include "../HierarquiaBanco/BancoExcecoes.h"
 #include "../UsuaryInterface/UsuaryInterface.h"
+#include "../HorarioAtual/FuncaoHorarioAtual.h"
 
 
 #endif

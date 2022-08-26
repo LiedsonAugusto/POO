@@ -1,7 +1,6 @@
 #ifndef PESSOAJURIDICA_H
 #define PESSOAJURIDICA_H
 
-//#include "../../ExtensoesGerais/ExtensoesGerais.h"
 #include "../Pessoa.h"
 
 class PessoaJuridica : public Pessoa{

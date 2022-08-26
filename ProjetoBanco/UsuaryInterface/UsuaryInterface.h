@@ -6,7 +6,7 @@
 
 class UsuaryInterface {
 public:
-    explicit UsuaryInterface(Banco *b){banco = b; clienteOuFuncionario = -1; escolhas = -1;}
+    explicit UsuaryInterface(Banco *b){banco = b; clienteOuFuncionario = -1; escolhas = -1; acessoFuncionario = 0;}
 
     int getEscolhas() const {return this->escolhas;}
 
@@ -21,6 +21,7 @@ private:
      Banco *banco;
      int clienteOuFuncionario;
      int escolhas;
+     int acessoFuncionario;
      static void printLogoBanco() ;
      static void printOpcoesCliente() ;
      static void printOpcoesFuncionario();

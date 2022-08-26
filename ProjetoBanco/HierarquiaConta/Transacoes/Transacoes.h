@@ -2,13 +2,14 @@
 #define TRANSACAO_H
 
 #include <string>
+#include "../../HorarioAtual/FuncaoHorarioAtual.h"
 using std::string;
 
 class Transacoes {
   public:
-    explicit Transacoes(string, double, string);
+    explicit Transacoes(const tm &, double, string);
 
-    string getData() const {return this->data;}
+    tm getData() const {return this->data;}
     double getValorTransacao() const {return this->valorTransacao;}
     string getDescricao() const {return this->descricao;}
 
@@ -16,7 +17,7 @@ class Transacoes {
 
   
   private:
-    string data;
+    tm data;
     double valorTransacao;
     string descricao;
 };

@@ -28,7 +28,7 @@ void ContaCorrenteComLimite::imprimirTransacoes() const {
 
 void ContaCorrenteComLimite::operator>>(double saldo){
     if (saldo == 0){
-        throw ContaExcecao("Valor para retirada inválido");
+        throw ContaExcecao("Valor para retirada invalido");
     }
     if (saldo > this->saldo){
         throw ContaExcecao("Valor da conta insuficiente para o saldo.");
@@ -37,17 +37,17 @@ void ContaCorrenteComLimite::operator>>(double saldo){
         throw ContaExcecao("Valor de retirada superior ao limite da conta.");
     }
     this->saldo -= saldo;
-    listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Saque"));
+    listTransacoes.push_back(Transacoes(horarioAtual(), saldo, "Saque"));
 }
 
 void ContaCorrenteComLimite::extrato() const {
     std::cout << "---------- CONTA LIMITE ----------\n";
-    std::cout << "Número da conta: " << getNumConta();
+    std::cout << "Numero da conta: " << getNumConta();
     std::cout << "\nNome: " << getNome();
     std::cout << "\nSaldo: " << getSaldo();
     std::cout << "\nLimite: " << getLimite() << '\n';
     if (!this->listTransacoes.empty()){
-        std::cout << "Transações: " << '\n';
+        std::cout << "Transaçoes: " << '\n';
         imprimirTransacoes();
     }
     std::cout << "--------------------------------------\n";
@@ -55,15 +55,15 @@ void ContaCorrenteComLimite::extrato() const {
 
 void ContaCorrenteComLimite::transferenciaEntreConta(Conta &conta, double saldo){
     if (&conta == this){
-        throw ContaExcecao("Não se deve fazer transferência para a mesma conta");
+        throw ContaExcecao("Nao se deve fazer transferencia para a mesma conta");
     }
     if (saldo > this->saldo){
-        throw ContaExcecao("Valor a ser transferido é maior que o valor existente na conta.");
+        throw ContaExcecao("Valor a ser transferido e maior que o valor existente na conta.");
     }
     if (saldo > this->limite){
-        throw ContaExcecao("Valor a ser transferido é superior ao limite da conta.");
+        throw ContaExcecao("Valor a ser transferido e superior ao limite da conta.");
     }
     this->saldo -= saldo;
     conta << saldo;
-    listTransacoes.push_back(Transacoes("31/04/2005", saldo, "Transferência"));
+    listTransacoes.push_back(Transacoes(horarioAtual(), saldo, "Transferencia"));
 }
