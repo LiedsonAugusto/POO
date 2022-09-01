@@ -19,7 +19,6 @@ class ContaPoupanca : public Conta{
 
         void transferenciaEntreConta(Conta &c, double saldo) override;
 
-
     private:
         tm data;
 };

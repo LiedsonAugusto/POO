@@ -23,4 +23,9 @@ add_executable(empty
         HierarquiaPessoa/PessoaFisica/PessoaFisica.cpp
         HierarquiaPessoa/PessoaJuridica/PessoaJuridica.h
         HierarquiaPessoa/PessoaJuridica/PessoaJuridica.cpp
-        main.cpp HierarquiaConta/ContaExcecao.h UsuaryInterface/UsuaryInterface.h UsuaryInterface/UsuaryInterface.cpp HorarioAtual/FuncaoHorarioAtual.h HorarioAtual/FuncaoHorarioAtual.cpp)
+        main.cpp
+        HierarquiaConta/ContaExcecao.h
+        UsuaryInterface/UsuaryInterface.h
+        UsuaryInterface/UsuaryInterface.cpp
+        HorarioAtual/FuncaoHorarioAtual.h
+        HorarioAtual/FuncaoHorarioAtual.cpp)

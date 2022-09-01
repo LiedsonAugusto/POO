@@ -244,6 +244,5 @@ void UsuaryInterface::loopFuncionalidades() {
                 funcaoCliente(this->escolhas);
                 break;
         }
-        system("pause");
     }
 }
