@@ -1,3 +1,0 @@
-C:/Users/PC/Documents/ENG - POO/ProjetoBanco/cmake-build-debug/CMakeFiles/empty.dir
-C:/Users/PC/Documents/ENG - POO/ProjetoBanco/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/PC/Documents/ENG - POO/ProjetoBanco/cmake-build-debug/CMakeFiles/rebuild_cache.dir
